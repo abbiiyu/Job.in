@@ -14,6 +14,7 @@ body {
 
 /* Navbar container */
 .navbar {
+    height: 120px;
     display: flex;
     align-items: center;
     padding: 30px 50px;
@@ -23,8 +24,9 @@ body {
 
 /* Logo styling */
 .navbar .logo img {
-    width: 60px;
+    width: auto;
     height: auto;
+    padding: 60px;
 }
 
 /* Navbar links */
@@ -38,7 +40,7 @@ body {
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 25px;
     transition: color 0.3s;
 }
 
@@ -58,6 +60,7 @@ body {
 }
 
 .register-btn {
+    font-size: 25px;
     display: flex;
     padding: 10px 20px;
     color: #003161;
@@ -66,10 +69,10 @@ body {
     cursor: pointer;
     text-decoration: none;
     border-radius:20px;
-    width: 90px;
-    height: 40px;
+    width: 120px;
+    height: 60px;
     margin-left: 20px;
-    margin-right: 20px; 
+    margin-right: 50px; 
     justify-content: center;
     text-align: center; 
     align-items: center;
@@ -80,32 +83,101 @@ body {
     background-color: whitesmoke;
 }
 
-.search-area{
-    justify-content: center;
-    text-align: center;
-    margin-top: 100px;
+.search-area {
     display: flex;
-    padding: 10px 20px;
-    overflow: hidden;
+    justify-content: center;
+    margin-top: 320px; /* Mengatur jarak dari atas */
+}
+
+.search-container {
+    position: relative;
+    width: 450px; /* Sesuaikan dengan lebar yang Anda inginkan */
+    
 }
 
 .search-container input[type="text"] {
-    flex: 1;
+    width: 820px;
+    height: 70px;
     padding: 10px 15px;
+    margin-left:-200px ;
+    padding-right: 50px; /* Beri ruang untuk tombol di sisi kanan */
     border: none;
     outline: none;
     font-size: 16px;
-  }
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 1000%;
+}
 
-.search-area button {
-    background-color: #003366; /* Dark blue */
+.search-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #003366;
     border: none;
-    padding: 10px 15px;
+    padding: 10px;
     cursor: pointer;
-  }
-  
-  .search-area button i {
-    width: 20px;
-    height: 20px;
-    filter: invert(1); /* Make the icon white */
-  }
+    margin-left: 550px;
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 67px;
+    height: 67px;
+}
+
+.search-container button i {
+    font-size: 40px;
+    color: white; /* Warna ikon */
+}
+
+.category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 220px;
+}
+
+.category div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 220px;
+    height: 240px;
+    background-color: rgba(30, 58, 95, 0.90);
+    color: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    
+}
+
+.category div:hover {
+    transform: scale(1.05);
+    background-color: #162d4a;
+}
+.category div a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: px;
+} 
+
+
+.category div img {
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
