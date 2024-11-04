@@ -108,6 +108,7 @@ body {
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.8);
     top: 1000%;
+    font-size: 20px;
 }
 
 .search-container button {
@@ -180,4 +181,14 @@ body {
     margin-bottom: 50px;
 }
 
+.banner-jobin{
+
+
+}
+
+.desk-banner img{
+    height: 700px;
+    width: 1000px;
+    border-radius: 20px;
+}
 
