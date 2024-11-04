@@ -10,6 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("../foto/backome.png");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Navbar container */
@@ -136,12 +137,35 @@ body {
     color: white; /* Warna ikon */
 }
 
-.category{
+.banner-container {
+    margin-top: 200px;
+    background-color: white; /* Background untuk seluruh area container */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-bottom: 50px; /* Tambahkan padding di bawah untuk jarak dengan elemen berikutnya */
+}
+
+.banner-jobin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; /* Beri jarak dengan kategori */
+}
+
+.desk-banner img {
+    height: 334px;
+    width: 585px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.category {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
-    margin-top: 220px;
+    margin-bottom: 
 }
 
 .category div {
@@ -158,21 +182,19 @@ body {
     transition: transform 0.3s, background-color 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    
 }
 
 .category div:hover {
     transform: scale(1.05);
     background-color: #162d4a;
 }
+
 .category div a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    margin-top: px;
-} 
-
+}
 
 .category div img {
     width: 50px;
@@ -180,15 +202,3 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
-.banner-jobin{
-
-
-}
-
-.desk-banner img{
-    height: 700px;
-    width: 1000px;
-    border-radius: 20px;
-}
-
