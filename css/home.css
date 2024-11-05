@@ -7,7 +7,7 @@
 
 /* Body styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins;
     background-image: url("../foto/backome.png");
     background-size: cover;
     background-attachment: fixed;
@@ -116,7 +116,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #003366;
+    background-color: #003161;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -137,27 +137,24 @@ body {
     color: white; /* Warna ikon */
 }
 
+
 .banner-container {
     margin-top: 200px;
-    background-color: white; /* Background untuk seluruh area container */
-    width: 100%;
+    width: auto;
+    height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-top: 20px;
-    padding-bottom: 50px; /* Tambahkan padding di bawah untuk jarak dengan elemen berikutnya */
+    padding-top: 50px; /* Tambahkan padding untuk memberi ruang di atas gambar */
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden; /* Pastikan border-radius tetap utuh */
+    text-align: center;
+    border-radius: 20px; /* Atur border-radius di sini */
 }
 
-.banner-jobin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px; /* Beri jarak dengan kategori */
-}
-
-.desk-banner img {
-    height: 334px;
-    width: 585px;
-    border-radius: 20px;
-    object-fit: cover;
+.ajg {
+    margin-left: -90px;
+    width: 2100px;
+    height: 400px; /* Pastikan tinggi gambar konsisten */
 }
 
 .category {
@@ -165,40 +162,47 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    margin-bottom: 
+    position: absolute;
+    top:10px; /* Coba atur lebih tinggi jika perlu */
+    left: 50%;
+    transform: translate(-50%, 0); /* Pusatkan secara horizontal */
+    z-index: 1; /* Pastikan z-index lebih tinggi */
 }
 
-.category div {
+
+.category-item div {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 20px;
-    width: 220px;
-    height: 240px;
-    background-color: rgba(30, 58, 95, 0.90);
-    color: #fff;
-    border-radius: 8px;
-    transition: transform 0.3s, background-color 0.3s;
+    background-color: rgba(0, 49, 97, 0.9);
+    width: 200px;
+    height: 190px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    gap: 40px;
 }
 
-.category div:hover {
-    transform: scale(1.05);
+.category-item:hover {
     background-color: #162d4a;
+    border-radius: 20px;
 }
 
-.category div a {
+.category-item div a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
+    margin-bottom: 10px; /* Sesuaikan margin */
 }
 
-.category div img {
+.category-item div img {
     width: 50px;
     height: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
+
+
+
+
