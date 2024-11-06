@@ -204,7 +204,7 @@ body {
 .jobin-comein {
     background-color: white;
     display: flex;
-    height: auto;
+    height: 700px;
     align-items: flex-start; /* Gambar dan teks rata atas */
 }
 
@@ -246,6 +246,7 @@ body {
 }
 
 .try-now-button{
+    text-align: center;
     margin-left:-390px;
     margin-top: 420px;
     background-color: #003161;;
@@ -258,6 +259,99 @@ body {
 
 .try-now-button:hover{
     background-color: #162d4a ;
+}
+
+.premium-container{
+    background-color:#D1DDEC;
+    padding: 50px 80px;
+    height: 800px;
+
+}
+
+.logohitam{
+    width: 200px;
+    height: 100px;
+
+
+}
+
+.premium-container p{
+    font-size: 37px;
+    line-height: 1.1;
+
+}
+
+.highlight {
+    color: blue;
+}
+
+.status {
+    position: relative;
+    text-align: right;
+    justify-content: right;
+}
+
+.status-img {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: -80px;
+    margin-right: 50px;
+    position: relative; /* Tidak wajib, hanya agar jelas */
+    z-index: 1;
+}
+
+.status-project {
+    position: absolute;
+    top: -125px; 
+    right: 280px;
+    padding: 10px;
+    z-index: 2;
+    width: 350px;
+    border-radius: 60px;
+    background-color: rgba(96, 139, 193, 0.4);
+    box-shadow: 10px 10px 100px rgba(96, 139, 193, 0.10);
+    backdrop-filter: blur(8px); 
+    color: white;
+    line-height: 1.2;
+    display: flex; /* Menyusun elemen di dalamnya secara horizontal */
+    align-items: center; /* Menyelaraskan elemen di tengah secara vertikal */
+}
+
+.status-project img {
+    height: 80px; /* Sesuaikan ukuran gambar */
+    width: 80px; /* Sesuaikan ukuran gambar */
+    margin-left: 0px; /* Memberi jarak antara gambar dan teks */
+}
+
+.status-project .text-container {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column; /* Menyusun teks secara vertikal */
+    margin-left: 10px;
+}
+
+.status-project p {
+    font-weight: 400;
+    font-size: 25px;
+    margin: 0;
+}
+
+.status-project span {
+    font-size: 12px;
+    margin-top: 5px; 
+    margin-right: 46px;
+}
+
+.diagram {
+    margin-left: 50%;
+    margin-top: -15%;
+    right: 20%;
+    position: absolute;
+    z-index: 0;
+    width: 1100px;  /* Tentukan lebar yang diinginkan */
+    height: 500px; /* Tentukan tinggi yang diinginkan */
+    background-color: #ccc;  /* Agar bisa terlihat selama percakapan */
 }
 
 
