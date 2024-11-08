@@ -264,7 +264,7 @@ body {
 .premium-container{
     background-color:#D1DDEC;
     padding: 50px 80px;
-    height: 800px;
+    height: 900px;
 
 
 }
@@ -272,9 +272,6 @@ body {
 .logohitam{
     width: 200px;
     height: 100px;
-    
-
-
 }
 
 .premium-container p{
@@ -350,16 +347,14 @@ body {
     margin-top: -15%;
     right: 20%;
     position: absolute;
-    z-index: -0;
-    width: 11s00px;  /* Tentukan lebar yang diinginkan */
+    z-index: 0;
+    width: 1100px;  /* Tentukan lebar yang diinginkan */
     height: 500px; /* Tentukan tinggi yang diinginkan */
     background-color: #ccc;  /* Agar bisa terlihat selama percakapan */
 }
 
 .list-container {
-    z-index: 1;
     position: relative; /* Pastikan konteks z-index */
-    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -397,5 +392,43 @@ body {
     font-size: 30px;
 }
 
+.freelancer {
+    background-color: white;
+    padding: 10rem;
+    text-align: center;
+}
 
+.freelancer h4 {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 10rem;
+    text-align: left;
+}
 
+.free-box-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Jarak antar kotak */
+    flex-wrap: wrap; /* Supaya tetap rapi di layar lebih kecil */
+    margin-top: 20px;
+}
+
+.free-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    text-align: center;
+}
+
+.free-box img {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 10px;
+}
+
+.free-box p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
