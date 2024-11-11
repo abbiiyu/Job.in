@@ -275,7 +275,7 @@ body {
 }
 
 .premium-container p{
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.1;
 
 }
@@ -343,12 +343,12 @@ body {
 
 .diagram {
     margin-left: 50%;
-    margin-top: -12%;
+    margin-top: -15%;
     right: 22%;
     position: absolute;
     z-index: 0;
-    width: 1100px;  /* Tentukan lebar yang diinginkan */
-    height: 500px; /* Tentukan tinggi yang diinginkan */
+    width: 56.25rem;  /* Tentukan lebar yang diinginkan */
+    height: 31.25rem; /* Tentukan tinggi yang diinginkan */
     background-color: #ccc;  /* Agar bisa terlihat selama percakapan */
 }
 
@@ -443,23 +443,23 @@ body {
     font-size: 4rem;
     color: #333;
     margin-bottom: 10rem;
-    text-align: left;
+    text-align: left;w
 }
 
 .popular-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem; 
+    gap: 4rem; 
     margin-top: 20px;
 }
 
 .popular-box {
     background-color: #D9D9D9;
-    height: 25rem;
+    height: 20rem;
     border-radius: 30px;
     cursor: pointer;
-    width: 20rem;
+    width: 16rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10px; 
     display: flex;
@@ -474,10 +474,10 @@ body {
 
 .popular-box p{
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     padding: 0 10px;
     list-style-type: none;
     color: black;
@@ -489,8 +489,8 @@ body {
 }
 
 .popular-box img {
-    height: 16rem;
-    width: 16rem;
+    height: 13rem;
+    width: 13rem;
     background-color: white;
     border-radius: 30px;
     margin: 10px 0; 
@@ -504,16 +504,17 @@ body {
 
 .join {
     background-color: white;
-    height: auto;
+    height: 20rem;
     width: auto;
 }
 
 .join-now{
     background-color: #608BC1;
     max-width: 78.938rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     justify-items: center;
-    margin-left:40rem;
+    margin-left:20rem;
     height: auto;
     height: 13rem;
     border-radius: 30px;
@@ -523,6 +524,10 @@ body {
     font-size: 3rem;
     padding: 3rem;
     color: white;
+}
+
+.join-sp{
+    color: #003161;
 }
 
 
@@ -535,6 +540,7 @@ body {
     padding: 5;
     height: 2rem;
     margin-bottom: 4rem;
+    
 }
 
 .join-btn a{
