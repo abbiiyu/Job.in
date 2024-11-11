@@ -552,7 +552,6 @@ body {
     color: white;
     padding: 30px 60px;
     text-align: left;
-    height: 50rem;
     font-family: Poppins;
 }
 
@@ -607,13 +606,50 @@ body {
     font-size: 1rem;
 }
 
+.footer-link a:hover{
+    color: black;
+}
+
 .footer hr {
     border: 0; /* Menghapus border default hr */
     height: 2px; /* Ketebalan garis */
     background-color: white; /* Warna garis */
     margin: 20px 0; /* Jarak atas dan bawah untuk memberi ruang */
-    width: 50rem; /* Memastikan garis melebar penuh */
-    margin-top: 15rem;
+    width: 110rem; /* Memastikan garis melebar penuh */
+    
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: space-between; /* Memberikan jarak antar elemen */
+    gap: 10px; /* Memberikan jarak antar elemen */
+    padding: 20px 0; /* Memberikan padding vertikal */
+    flex-wrap: wrap; /* Membuat elemen bisa membungkus jika terlalu lebar */
+}
+
+.footer-bottom img {
+    height: 3rem; /* Sesuaikan ukuran logo */
+}
+
+
+
+.footer-bottom p {
+    margin: 0; /* Menghapus margin default */
+    font-size: 1.3rem;
+    color: white;
+    margin-right: 60rem;
+}
+
+.footer-sosmed {
+    display: flex; /* Menata ikon sosial media secara horizontal */
+    gap: 20px; /* Memberikan jarak antar ikon */
+
+}
+
+.footer-sosmed a img {
+    width: 2rem; /* Ukuran ikon sosial media */
+    height: auto;
 }
 
 
