@@ -1,0 +1,69 @@
+/* Footer styling */
+.footer {
+    background-color: #003161;
+    color: white;
+    padding: 30px 60px;
+    text-align: left;
+    height: 50rem;
+    font-family: Poppins;
+}
+
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+    padding-bottom: 20px;
+}
+
+.footer-logo img {
+    font-size: 2rem;
+    height: 5rem;
+}
+
+.footer-contact{
+    margin-right: 10rem; 
+    display: flex;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    color: white;
+}
+
+.phone, .marker {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.phone img, .marker img {
+    width: 2rem; 
+    height: auto;
+}
+
+.phone p, .marker p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-link {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat dua kolom */
+    column-gap: 12rem; /* Jarak horizontal antar kolom */
+    row-gap: 5rem; 
+}
+
+.footer-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer hr {
+    border: 0; /* Menghapus border default hr */
+    height: 2px; /* Ketebalan garis */
+    background-color: white; /* Warna garis */
+    margin: 20px 0; /* Jarak atas dan bawah untuk memberi ruang */
+    width: 50rem; /* Memastikan garis melebar penuh */
+    margin-top: 15rem;
+}
