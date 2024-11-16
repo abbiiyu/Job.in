@@ -150,14 +150,23 @@ body {
 .dropdown {
     display: none; /* Sembunyikan secara default */
     position: absolute;
-    top: 5rem; /* Jarak dropdown dari ikon, sesuaikan */
-    left: 98rem; /* Sesuaikan dengan posisi ikon */
+    top: 5.7rem; /* Jarak dropdown dari ikon, sesuaikan */
+    left: 99rem; /* Sesuaikan dengan posisi ikon */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahan bayangan */
     z-index: 1000;
     min-width: 200px; /* Lebar minimum */
+}
+
+.dropdown li a{
+    text-decoration: none;
+    color:black;
+
+}
+.dropdown ul hr{
+    color: blue;
 }
 
 .dropdown ul {
@@ -320,3 +329,4 @@ background-color: #f2f2f2;
     width: 2rem; /* Ukuran ikon sosial media */
     height: auto;
 }
+

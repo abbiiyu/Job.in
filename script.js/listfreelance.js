@@ -25,3 +25,6 @@ if (!profileIcon.contains(event.target) && !dropdown.contains(event.target)) {
     dropdown.style.display = 'none';
 }
 });
+
+
+

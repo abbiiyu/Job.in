@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../css/listfreelance.css">
+    <link rel="stylesheet" href="../css/inbox.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>List-Freelance</title>
+    <title>Document</title>
 </head>
 <body>
     <nav class="navbar">
@@ -59,18 +59,24 @@
         <script src="../script.js/listfreelance.js"></script>
     </nav> 
 
-    <div class="list">
-        <h1>My lists</h1>
-        <p>Organize your go-to freelancers and favorite services into custom lists <br>you can easily access and share with your team.</p>
+    <div class="container">
+        <div class="column1">
+          <div class="card1">
+            <img src="/foto/messagesinbox.png" alt="No Conversations Icon" class="icon1">
+            <h2>No Conversations</h2>
+            <p>There are no conversations under <br><strong>"All messages"</strong></p>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="card2">
+            <img src="../foto/postboxinbox.png" alt="Mailbox Icon" class="icon2">
+            <h2>Ah, a fresh new inbox</h2>
+            <p>You haven’t started any conversations yet, <br>but when you do, you’ll find them here.</p>
+          </div>
+        </div>
+      </div>
 
-        <button class="button">
-            <span>+</span>
-            <br>
-            <p>Create list</p>
-        </button>
-    </div>
-
-    <footer class="footer">
+      <footer class="footer">
         <div class="footer-top">
             <div class="footer-logo">
                 <img src="../foto/logoputih.png" alt="">
@@ -112,7 +118,5 @@
             </div>
         </div>
     </footer>
-    
-        
 </body>
 </html>
