@@ -1,11 +1,38 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Simulasi data pengguna dari database
+    const userName = "Salma Rahman"; // Nama pengguna
+    const userImage = ""; // URL gambar profil pengguna (kosong jika menggunakan inisial)
 
- const userName = "Salma Rahman";
-        
+    // Mengambil elemen yang diperlukan
+    const profileNameElement = document.querySelector(".profile-name"); // Nama pengguna
+    const profileImgElement = document.getElementById("profileIcon"); // Ikon profil
 
- const initials = userName.charAt(0);
- 
+    // Menampilkan nama pengguna di dropdown
+    if (profileNameElement) {
+        profileNameElement.textContent = userName;
+    }
 
- document.getElementById("profileIcon").textContent = initials;
+    // Menampilkan ikon profil (gambar atau inisial)
+    if (profileImgElement) {
+        if (userImage) {
+            // Jika gambar tersedia, gunakan gambar
+            profileImgElement.innerHTML = `<img src="${userImage}" alt="Profile Icon" class="profile-img">`;
+        } else {
+            // Jika gambar tidak tersedia, gunakan inisial
+            const initials = userName
+                .split(" ")
+                .map(word => word.charAt(0)) // Ambil huruf pertama dari setiap kata
+                .join(""); // Gabungkan inisial
+            profileImgElement.textContent = initials;
+
+            // Debugging: Cek inisial yang dihasilkan
+            console.log("Inisial yang dihasilkan:", initials);
+        }
+    }
+});
+
+
+
 
 
 
