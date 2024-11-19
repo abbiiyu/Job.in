@@ -274,7 +274,7 @@ body {
 
 .Programtech h2 {
     font-size: 3rem; 
-    margin-left: 13rem;
+    margin-left: 12rem;
     margin-bottom: 2rem;
 }
 
@@ -327,4 +327,38 @@ body {
 
 .isi-box p:hover  {
     color: white;
+} 
+
+.List-explore {
+    margin: 2rem;
+}
+
+.List-explore h3{
+    font-size: 3rem; 
+    margin-left: 12rem;
+    margin-bottom: 2rem;
+}
+
+.box-explore {
+    display: flex;
+    flex-wrap: wrap; /* Agar elemen otomatis pindah ke baris berikutnya */
+    gap:1rem; /* Jarak antar kolom */
+}
+
+.isi-explore {
+    flex: 1 1 calc(25% - 1.25rem); /* Mengatur lebar tiap kolom 25% dengan jarak */
+    box-sizing: border-box;
+    text-align: center;
+    align-items: left;
+}
+
+.isi-explore img {
+    max-width: 20rem;
+    height: 15rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2rem;
+}
+.isi-explore p{
+    font-weight: bold;
 }
