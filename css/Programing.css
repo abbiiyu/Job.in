@@ -330,35 +330,170 @@ body {
 } 
 
 .List-explore {
-    margin: 2rem;
+    margin: 2rem auto;
+    padding: 3rem;
+    height: 70rem;
 }
 
-.List-explore h3{
+.List-explore h3 {
     font-size: 3rem; 
     margin-left: 12rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .box-explore {
     display: flex;
-    flex-wrap: wrap; /* Agar elemen otomatis pindah ke baris berikutnya */
-    gap:1rem; /* Jarak antar kolom */
+    flex-wrap: wrap; /* Membungkus elemen secara otomatis */
+    justify-content: center; /* Menengahkan elemen di kontainer */
+    row-gap: 1rem; /* Jarak antar baris */
+    column-gap: 2rem; /* Jarak antar kolom */
+    margin: 0 auto; /* Posisikan kontainer di tengah */
 }
 
 .isi-explore {
-    flex: 1 1 calc(25% - 1.25rem); /* Mengatur lebar tiap kolom 25% dengan jarak */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     box-sizing: border-box;
-    text-align: center;
-    align-items: left;
+    padding: 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi pada elemen utama */
 }
 
 .isi-explore img {
-    max-width: 20rem;
-    height: 15rem;
+    width: 20rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 1rem;
     display: block;
-    margin: 0 auto;
-    border-radius: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi hanya untuk gambar */
 }
-.isi-explore p{
+
+.isi-explore:hover img {
+    transform: scale(1.05); /* Memperbesar gambar saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada gambar */
+}
+
+.isi-explore p {
     font-weight: bold;
+    margin: 1rem 0 0 0;
+    transition: transform 0.3s ease; /* Transisi untuk teks */
+}
+
+.isi-explore:hover p {
+    transform: scale(1.05); /* Memperbesar teks saat hover */
+}
+
+.box-explore a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ///// */
+
+.footer {
+    background-color: #003161;
+    color: white;
+    padding: 30px 60px;
+    text-align: left;
+    font-family: Poppins;
+}
+
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+    padding-bottom: 20px;
+}
+
+.footer-logo img {
+    font-size: 2rem;
+    height: 5rem;
+}
+
+.footer-contact{
+    margin-right: 10rem; 
+    display: flex;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    color: white;
+}
+
+.phone, .marker {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.phone img, .marker img {
+    width: 2rem; 
+    height: auto;
+}
+
+.phone p, .marker p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-link {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat dua kolom */
+    column-gap: 12rem; /* Jarak horizontal antar kolom */
+    row-gap: 5rem; 
+}
+
+.footer-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-link a:hover{
+    color: black;
+}
+
+.footer hr {
+    border: 0; /* Menghapus border default hr */
+    height: 2px; /* Ketebalan garis */
+    background-color: white; /* Warna garis */
+    margin: 20px 0; /* Jarak atas dan bawah untuk memberi ruang */
+    width: 110rem; /* Memastikan garis melebar penuh */
+    
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: space-between; /* Memberikan jarak antar elemen */
+    gap: 10px; /* Memberikan jarak antar elemen */
+    padding: 20px 0; /* Memberikan padding vertikal */
+    flex-wrap: wrap; /* Membuat elemen bisa membungkus jika terlalu lebar */
+}
+
+.footer-bottom img {
+    height: 3rem; /* Sesuaikan ukuran logo */
+}
+
+
+
+.footer-bottom p {
+    margin: 0; /* Menghapus margin default */
+    font-size: 1.3rem;
+    color: white;
+    margin-right: 60rem;
+}
+
+.footer-sosmed {
+    display: flex; /* Menata ikon sosial media secara horizontal */
+    gap: 20px; /* Memberikan jarak antar ikon */
+
+}
+
+.footer-sosmed a img {
+    width: 2rem; /* Ukuran ikon sosial media */
+    height: auto;
 }
