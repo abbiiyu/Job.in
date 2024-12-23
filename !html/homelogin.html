@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/homelogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../foto/logoputih.png" alt="">
+        </div>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" placeholder="Search of any service...">
+                <button>
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="navbar-link">
+            <a href="">Home</a>
+            <a href="#" id="orderLink" >Order</a>
+
+            <a href="#" style="color: #ffffff;">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="#" style="color: #ffffff;">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="#" style="color: #ffffff;">
+                <i class="fa-regular fa-heart"></i>
+            </a>
+        </div>
+
+        <div class="popup" id="orderPopup">
+            <div class="popup-content">
+                <img src="../foto/norder.png" alt="No Orders Yet" class="popup-image">
+                <h3>No Orders Yet</h3>
+                <p>Use the search box to find the digital services you need.</p>
+            </div>
+        </div>
+        
+
+        <!-- pop up order -->
+
+
+        <div class="profile-icon" id="profileIcon" onclick="toggleDropdown()"></div>
+        
+        <div class="dropdown" id="dropdownMenu">
+
+            <ul>
+                <li><a href="">Salma Agustin</a></li>
+                <hr style="border: 1px solid #003161;">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="upload-project.html">Upload Project</a></li>
+                <li><a href="bill-payment.html">Bill a Payment</a></li>
+                <hr style="border: 1px solid #003161;">
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="logout.html">Log Out</a></li>
+            </ul>
+            
+        </div>
+
+        <script src="../script.js/listfreelance.js"></script>
+    </nav> 
+
+    <div class="search-area">
+        <div class="search-container">
+            <input type="text" placeholder="Search of any service...">
+            <button>
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="banner-container">
+        <img src="../foto/Ellipse4.png" alt="" class="ajg">
+
+        <div class="category">
+            <div class="category-item">
+                <div class="programing">
+                    <img src="../foto/program.png" alt="program image" class="program-image">
+                    <a href="">Programming & <br>Tech</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <div class="graphic">
+                    <img src="../foto/graphic.png" alt="graphic image" class="graphic-image">
+                    <a href="">Graphic & <br>Design</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <div class="video">
+                    <img src="../foto/video.png" alt="video image" class="video-image">
+                    <a href="">Video & <br>Animation</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <div class="writing">
+                    <img src="../foto/writing.png" alt="writing image" class="writing-image">
+                    <a href="">Writing & <br>Translation</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <div class="music">
+                    <img src="../foto/music.png" alt="Music Image" class="music-image">
+                    <a href="">Music & <br>Audio</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+
+        <div class="jobin-comein">
+            <img src="../foto/pc.jpg" alt="" class="comein">
+            <h1>JOBIN.</h1>
+            <H2>Come On</H2>
+            <p>Develop your interests and talents with <br>Jobin. Jobin helps you to grow and <br>provide facilities for freelance workers <br>to promote their services</p>
+        </div>
+    </div>
+
+    <div class="premium-container">
+        <img class="logohitam" src="../foto/logo hitam.png" alt="">
+        <p>The <span class="highlight">premium</span> freelance <br>solution for businesses</p>
+
+        <div class="status">
+            <img class="status-img"   src="../foto/status.jpg" alt="">
+            
+            <div class="status-project">
+                <img src="../foto/70pers.png" alt="">
+                <div class="text-container">
+                    <p>Project Status</p>
+                    <span>92% | 4 steps out of 5</span>
+                </div>
+            </div>
+        </div>
+        <img class="diagram" src="../foto/diagram3.png" alt="">
+
+        <div class="list-container">
+            <div class="list-box">
+                <div class="isi-list">
+                    <img class="icon-list" src="../foto/Check.png" alt="">
+                    <h3>Dedicated hiring experts</h3>
+                    <p>Count on an account manager to find you the right talent and see to your project’s every need.</p>
+                </div>
+            </div>
+
+            <div class="list-box">
+
+                <div class="isi-list">
+                    <img class="icon-list" src="../foto/Check.png" alt="">
+                    <h3>Satisfaction guarantee</h3>
+                    <p>Order confidently, with guaranteed refunds for less-than-satisfactory deliveries.</p>
+                </div>
+            </div>
+
+            <div class="list-box">
+                <div class="isi-list">
+                    <img class="icon-list" src="../foto/Check.png" alt="">
+                    <h3>Advanced management tools</h3>
+                    <p>Seamlessly integrate freelancers into your team and projects.</p>
+                </div>
+            </div>
+
+            <div class="list-box">
+                <div class="isi-list">
+                    <img class="icon-list" src="../foto/Check.png" alt="">
+                    <h3>Flexible payment models</h3>
+                    <p>Pay per project or opt for hourly rates to facilitate longer-term collaboration.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="freelancer">
+        <h4>Make it all happen with freelancers</h4>
+        <div class="free-box-container">
+            <div class="free-box">
+                <img src="../foto/puzzle.png" alt="Puzzle Icon">
+                <p>Access a pool of top talent across 700 categories.</p>
+            </div>
+            <div class="free-box">
+                <img src="../foto/jempol.png" alt="Thumb Icon">
+                <p>Enjoy a simple, easy-to-use matching experience.</p>
+            </div>
+            <div class="free-box">
+                <img src="../foto/lampu.png" alt="Light Bulb Icon">
+                <p>Get quality work done quickly and within budget.</p>
+            </div>
+            <div class="free-box">
+                <img src="../foto/stonk.png" alt="Graph Icon">
+                <p>Only pay when you’re happy.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popular">
+        <h5>Popular Services</h5>
+        <div class="popular-container">
+            <div class="popular-box">
+                <a href="https://www.tokopedia.com">
+                <p>Web Development</p>
+                <img src="../foto/popular1.png" alt="">
+            </div>
+
+            <div class="popular-box">
+                <a href="https://www.tokopedia.com">
+                <p>Logo Design</p>
+                <img src="../foto/popular2.png" alt="">
+            </div>
+
+            <div class="popular-box">
+                <a href="https://www.tokopedia.com">
+                <p>Video Editing</p>
+                <img src="../foto/popular3.png" alt="">
+            </div>
+
+            <div class="popular-box">
+                <a href="https://www.tokopedia.com">
+                <p>Product Photography</p>
+                <img src="../foto/popular4.png" alt="">
+            </div>
+
+            
+        </div>
+    </div>
+
+  
+
+  
+
+    
+    
+
+    
+</body>
+</html>

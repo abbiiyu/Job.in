@@ -53,5 +53,20 @@ if (!profileIcon.contains(event.target) && !dropdown.contains(event.target)) {
 }
 });
 
+// POPUP ORDER
 
+const orderLink = document.getElementById("orderLink"); // Sesuaikan ID dengan elemen Anda
+const orderPopup = document.getElementById("orderPopup");
 
+// Ketika "Order" diklik
+orderLink.addEventListener("click", (event) => {
+    event.preventDefault(); // Menghentikan perilaku default
+    orderPopup.style.display = orderPopup.style.display === "block" ? "none" : "block";
+});
+
+// Klik di luar popup untuk menutupnya
+document.addEventListener("click", (event) => {
+    if (!orderPopup.contains(event.target) && event.target !== orderLink) {
+        orderPopup.style.display = "none";
+    }
+});
