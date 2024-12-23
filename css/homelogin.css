@@ -612,8 +612,8 @@ body {
     background-color: white;
     padding: 5rem 5rem;
     text-align: center;
-    height: auto;
-    margin-top: -6rem;
+    height: 50rem;
+    margin-top: 0rem;
 }
 
 .popular h5 {
@@ -678,6 +678,138 @@ body {
 
 .popular-box img:hover {
     transform: scale(1.1);
+}
+.join {
+    background-color: white;
+    height: 20rem;
+    width: auto;
+}
+
+.join-now{
+    background-color: white;
+    max-width: 78.938rem;
+    color: white;
+    text-align: center;
+    justify-items: center;
+    margin-left:20rem;
+    height: 5rem;
+    border-radius: 30px;
+}
+
+.join-now a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+/* Footer styling */
+.footer {
+    background-color: #003161;
+    color: white;
+    padding: 30px 60px;
+    text-align: left;
+    font-family: Poppins;
+
+}
+
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+    padding-bottom: 20px;
+}
+
+.footer-logo img {
+    font-size: 2rem;
+    height: 5rem;
+}
+
+.footer-contact{
+    margin-right: 10rem; 
+    display: flex;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    color: white;
+}
+
+.phone, .marker {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.phone img, .marker img {
+    width: 2rem; 
+    height: auto;
+}
+
+.phone p, .marker p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-link {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat dua kolom */
+    column-gap: 12rem; /* Jarak horizontal antar kolom */
+    row-gap: 5rem; 
+}
+
+.footer-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-link a:hover{
+    color: black;
+}
+
+.footer hr {
+    border: 0; /* Menghapus border default hr */
+    height: 2px; /* Ketebalan garis */
+    background-color: white; /* Warna garis */
+    margin: 20px 0; /* Jarak atas dan bawah untuk memberi ruang */
+    width: 110rem; /* Memastikan garis melebar penuh */
+    
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: space-between; /* Memberikan jarak antar elemen */
+    gap: 10px; /* Memberikan jarak antar elemen */
+    padding: 20px 0; /* Memberikan padding vertikal */
+    flex-wrap: wrap; /* Membuat elemen bisa membungkus jika terlalu lebar */
+}
+
+.footer-bottom img {
+    height: 3rem; /* Sesuaikan ukuran logo */
+}
+
+
+
+.footer-bottom p {
+    margin: 0; /* Menghapus margin default */
+    font-size: 1.3rem;
+    color: white;
+    margin-right: 60rem;
+}
+
+.footer-sosmed {
+    display: flex; /* Menata ikon sosial media secara horizontal */
+    gap: 20px; /* Memberikan jarak antar ikon */
+
+}
+
+.footer-sosmed a img {
+    width: 2rem; /* Ukuran ikon sosial media */
+    height: auto;
 }
 
 
