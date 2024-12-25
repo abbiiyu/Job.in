@@ -1,0 +1,687 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* Responsivitas untuk perangkat lebih kecil */
+@media (max-width: 1440px) {
+.container {
+    width: 100%;
+    height: auto;
+}
+}
+
+@media (max-height: 1024px) {
+.container {
+    height: 100%;
+    width: auto;
+}
+}
+/* Body styling */
+body {
+    width: auto; /* Sesuaikan dengan ukuran di Figma */
+    height: auto; /* Sesuaikan dengan tinggi di Figma */
+    margin: 0 auto;
+    font-family: Poppins;
+    background-color: white;
+}
+
+/* Navbar container */
+.navbar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: #003161;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.navbar .logo img {
+    width: 20rem;
+    height: auto;
+    padding: 60px;
+}
+
+.register-btn:hover {
+    background-color: whitesmoke;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-right: 4rem;
+}
+
+.search-box {
+    position: relative;
+    width: 450px;
+}
+
+.search-box input[type="text"] {
+    width: 40.004rem;
+    height: 3.625rem;
+    padding: 10px 15px;
+    padding-right: 50px; /* Beri ruang untuk tombol di sisi kanan */
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+}
+
+.search-box button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #003161;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left:36rem;
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.625rem; 
+    border-bottom-right-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.679rem;
+    height: 3.301rem;
+}
+
+.search-box input::placeholder {
+    color: black; /* Ganti dengan warna yang diinginkan */
+    opacity: 1;
+}
+
+.search-box button i {
+    font-size: 30px;
+    color: white; /* Warna ikon */
+}
+/* Navbar links */
+.navbar .navbar-link {
+    display: flex;
+    gap: 2.5rem;
+    margin-left:15rem ; 
+}
+
+.navbar .navbar-link a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+
+.navbar .navbar-link i {
+    font-size: 2.188rem;
+    gap: 5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.navbar-link i:hover {
+    color: black; /* Ganti dengan warna hover yang diinginkan */
+}
+
+.navbar .navbar-link a:hover {
+    color: black;
+}
+
+/* Hover styling for order link */
+
+#orderLink{
+    cursor: pointer;
+}
+#orderLink:hover {
+    color: black; 
+}
+
+.profile-icon {
+    width: 4rem; /* Atur lebar sesuai kebutuhan */
+    height: 4rem; /* Atur tinggi sesuai kebutuhan */
+    background-color: white;
+    border-radius: 50%; /* Membuat elemen berbentuk lingkaran */
+    display: flex;
+    margin-left: 8rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahan bayangan opsional */
+    color: #003161;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor:pointer;
+}
+
+.dropdown {
+    display: none; /* Sembunyikan secara default */
+    position: absolute;
+    top: 6rem; /* Jarak dropdown dari ikon, sesuaikan */
+    left: 97rem; /* Sesuaikan dengan posisi ikon */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahan bayangan */
+    z-index: 1000;
+    min-width: 15.5rem; /* Lebar minimum */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #003161; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    font-size: 1.5rem; /* Lebih besar supaya inisial lebih jelas */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.profile-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-left:1.5rem;
+}
+
+
+.dropdown li a{
+    text-decoration: none;
+    color:black;
+
+}
+.dropdown ul hr{
+    color: blue;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 10px;
+    cursor: pointer;
+    color: #003161;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown ul li:hover {
+    background-color: black; /* Warna latar saat di-hover */
+}
+
+.popup {
+    display: none; /* Tersembunyi secara default */
+    position: absolute;
+    top: 6.5rem; /* Sesuaikan dengan posisi */
+    left: 62%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 20rem; /* Lebar popup */
+    z-index: 1000;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-image {
+    margin-top: 2rem;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.popup h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* batas nav */
+
+
+/* Main container styling */
+.Programtech {
+    font-family: Poppins;;
+    padding: 3rem;
+}
+
+.Programtech h2 {
+    font-size: 3rem; 
+    margin-left: 12rem;
+    margin-bottom: 2rem;
+}
+
+.go-back {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: #003161;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.go-back:hover {
+    background-color: black;
+}
+/* Container for the boxes */
+.box-program {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between each box */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+/* Individual box styling */
+.isi-box {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Vertically center the image and text */
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+    width: 21rem; /* Adjust box width as needed */
+    gap: 2rem; /* Space between image and text */
+    cursor: pointer;
+}
+
+.isi-box:hover {
+    transform: scale(1.05); /* Slightly scales up the box */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    background-color: black;
+    color: white
+}
+
+.isi-box img {
+    width: 4rem;
+    height: 4rem;
+    background-color: #D9D9D9;
+    transition: transform 0.3s ease; /* Adds a hover effect to the image */
+}
+
+.isi-box:hover img {
+    transform: scale(1.1); /* Scales up the image slightly on hover */
+}
+
+.isi-box p {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+    text-align: left;
+}
+
+.isi-box p:hover  {
+    color: white;
+} 
+/* /////// */
+.List-explore {
+    margin: 2rem auto;
+    padding: 3rem;
+    height: 22rem;
+}
+
+.List-explore h3 {
+    font-size: 1.5rem; 
+    margin-left: 10.5rem;
+    margin-bottom: 1rem;
+}
+
+.box-explore {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus elemen secara otomatis */
+    justify-content: center; /* Menengahkan elemen di kontainer */
+    row-gap: 1rem; /* Jarak antar baris */
+    column-gap: 2rem; /* Jarak antar kolom */
+    margin: 0 auto; /* Posisikan kontainer di tengah */
+}
+
+.isi-explore {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi pada elemen utama */
+}
+
+.isi-explore img {
+    width: 20rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+    border: 1px solid #D9D9D9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi hanya untuk gambar */
+}
+
+.isi-explore:hover img {
+    transform: scale(1.05); /* Memperbesar gambar saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada gambar */
+}
+
+.isi-explore p {
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+    transition: transform 0.3s ease; /* Transisi untuk teks */
+}
+
+
+
+.box-explore a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ///// */
+.list-program-1 {
+    margin: 2rem auto;
+    padding: 3rem;
+    height: 22rem;
+}
+
+.list-program-1 h3 {
+    font-size: 1.5rem; 
+    margin-left: 10.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.freelancer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    margin: 0 auto;
+}
+
+
+.freelancer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.freelancer-card img {
+    width: 20rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+    border: 1px solid #D9D9D9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freelancer-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.freelancer-card p {
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+    transition: transform 0.3s ease;
+}
+/* ///// */
+.list-program-2 {
+    margin: 2rem auto;
+    padding: 3rem;
+    height: 22rem;
+}
+
+.list-program-2 h3 {
+    font-size: 1.5rem; 
+    margin-left: 10.5rem;
+    margin-bottom: 1rem;
+}
+
+.freelancer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    margin: 0 auto;
+}
+
+.freelancer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freelancer-card img {
+    width: 20rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+    border: 1px solid #D9D9D9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freelancer-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.freelancer-card p {
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+    transition: transform 0.3s ease;
+}
+
+/* ///// */
+.list-program-3 {
+    margin: 2rem auto;
+    padding: 3rem;
+    height: 30rem;
+}
+
+.list-program-3 h3 {
+    font-size: 1.5rem; 
+    margin-left: 10.5rem;
+    margin-bottom: 1rem;
+}
+
+.freelancer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    margin: 0 auto;
+}
+
+.freelancer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freelancer-card img {
+    width: 20rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+    border: 1px solid #D9D9D9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freelancer-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.freelancer-card p {
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+    transition: transform 0.3s ease;
+}
+/* ///// */
+.footer {
+    background-color: #003161;
+    color: white;
+    padding: 30px 60px;
+    text-align: left;
+    font-family: Poppins;
+}
+
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+    padding-bottom: 20px;
+}
+
+.footer-logo img {
+    font-size: 2rem;
+    height: 5rem;
+}
+
+.footer-contact{
+    margin-right: 10rem; 
+    display: flex;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    color: white;
+}
+
+.phone, .marker {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.phone img, .marker img {
+    width: 2rem; 
+    height: auto;
+}
+
+.phone p, .marker p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-link {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat dua kolom */
+    column-gap: 12rem; /* Jarak horizontal antar kolom */
+    row-gap: 5rem; 
+}
+
+.footer-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-link a:hover{
+    color: black;
+}
+
+.footer hr {
+    border: 0; /* Menghapus border default hr */
+    height: 2px; /* Ketebalan garis */
+    background-color: white; /* Warna garis */
+    margin: 20px 0; /* Jarak atas dan bawah untuk memberi ruang */
+    width: 110rem; /* Memastikan garis melebar penuh */
+    
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: space-between; /* Memberikan jarak antar elemen */
+    gap: 10px; /* Memberikan jarak antar elemen */
+    padding: 20px 0; /* Memberikan padding vertikal */
+    flex-wrap: wrap; /* Membuat elemen bisa membungkus jika terlalu lebar */
+}
+
+.footer-bottom img {
+    height: 3rem; /* Sesuaikan ukuran logo */
+}
+
+
+
+.footer-bottom p {
+    margin: 0; /* Menghapus margin default */
+    font-size: 1.3rem;
+    color: white;
+    margin-right: 60rem;
+}
+
+.footer-sosmed {
+    display: flex; /* Menata ikon sosial media secara horizontal */
+    gap: 20px; /* Memberikan jarak antar ikon */
+
+}
+
+.footer-sosmed a img {
+    width: 2rem; /* Ukuran ikon sosial media */
+    height: auto;
+}

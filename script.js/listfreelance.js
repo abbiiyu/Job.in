@@ -70,3 +70,12 @@ document.addEventListener("click", (event) => {
         orderPopup.style.display = "none";
     }
 });
+
+
+
+
+
+// goback
+ function goBack() {
+    window.history.back();
+}
