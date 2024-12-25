@@ -79,3 +79,49 @@ document.addEventListener("click", (event) => {
  function goBack() {
     window.history.back();
 }
+
+// slider img
+
+let currentIndex = 0;
+
+function slideLeft() {
+    const slider = document.querySelector('.slider');
+    if (currentIndex > 0) {
+        currentIndex--;
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateThumbnail();
+    }
+}
+
+function slideRight() {
+    const slider = document.querySelector('.slider');
+    const maxIndex = slider.children.length - 1;
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateThumbnail();
+    }
+}
+
+function goToSlide(index) {
+    const slider = document.querySelector('.slider');
+    currentIndex = index;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateThumbnail();
+}
+
+function updateThumbnail() {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach((thumb, index) => {
+        if (index === currentIndex) {
+            thumb.classList.add('active');
+        } else {
+            thumb.classList.remove('active');
+        }
+    });
+}
+
+// Initial call to highlight the first thumbnail
+updateThumbnail();
+
+
