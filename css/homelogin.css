@@ -231,8 +231,9 @@ body {
 }
 
 .dropdown ul li:hover {
-    background-color: black; /* Warna latar saat di-hover */
+    background-color: rgba(96, 139, 193, 0.3);
 }
+
 
 .popup {
     display: none; /* Tersembunyi secara default */

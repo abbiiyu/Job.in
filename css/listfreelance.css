@@ -48,19 +48,18 @@ body {
     background-color: whitesmoke;
 }
 
-.search-area {
+.search-section {
     display: flex;
     justify-content: center;
     margin-right: 4rem;
 }
 
-.search-container {
+.search-box {
     position: relative;
     width: 450px;
-
 }
 
-.search-container input[type="text"] {
+.search-box input[type="text"] {
     width: 40.004rem;
     height: 3.625rem;
     padding: 10px 15px;
@@ -73,7 +72,7 @@ body {
     font-size: 20px;
 }
 
-.search-container button {
+.search-box button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -93,19 +92,19 @@ body {
     height: 3.301rem;
 }
 
-.search-container input::placeholder {
+.search-box input::placeholder {
     color: black; /* Ganti dengan warna yang diinginkan */
     opacity: 1;
 }
-.search-container button i {
+
+.search-box button i {
     font-size: 30px;
     color: white; /* Warna ikon */
 }
-
 /* Navbar links */
 .navbar .navbar-link {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     margin-left:15rem ; 
 }
 
@@ -131,13 +130,22 @@ body {
     color: black;
 }
 
+/* Hover styling for order link */
+
+#orderLink{
+    cursor: pointer;
+}
+#orderLink:hover {
+    color: black; 
+}
+
 .profile-icon {
-    width: 70px; /* Atur lebar sesuai kebutuhan */
-    height: 70px; /* Atur tinggi sesuai kebutuhan */
+    width: 4rem; /* Atur lebar sesuai kebutuhan */
+    height: 4rem; /* Atur tinggi sesuai kebutuhan */
     background-color: white;
     border-radius: 50%; /* Membuat elemen berbentuk lingkaran */
     display: flex;
-    margin-left: 10rem;
+    margin-left: 8rem;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahan bayangan opsional */
@@ -150,15 +158,44 @@ body {
 .dropdown {
     display: none; /* Sembunyikan secara default */
     position: absolute;
-    top: 5.7rem; /* Jarak dropdown dari ikon, sesuaikan */
-    left: 99rem; /* Sesuaikan dengan posisi ikon */
+    top: 6rem; /* Jarak dropdown dari ikon, sesuaikan */
+    left: 97rem; /* Sesuaikan dengan posisi ikon */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahan bayangan */
     z-index: 1000;
-    min-width: 200px; /* Lebar minimum */
+    min-width: 15.5rem; /* Lebar minimum */
 }
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #003161; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    font-size: 1.5rem; /* Lebih besar supaya inisial lebih jelas */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.profile-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-left:1.5rem;
+}
+
 
 .dropdown li a{
     text-decoration: none;
@@ -185,7 +222,47 @@ body {
 }
 
 .dropdown ul li:hover {
-    background-color: #f0f0f0; /* Warna latar saat di-hover */
+    background-color: rgba(96, 139, 193, 0.3);
+}
+
+.popup {
+    display: none; /* Tersembunyi secara default */
+    position: absolute;
+    top: 6.5rem; /* Sesuaikan dengan posisi */
+    left: 62%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 20rem; /* Lebar popup */
+    z-index: 1000;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-image {
+    margin-top: 2rem;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.popup h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 14px;
+    color: #555;
 }
 .list{
     padding:3rem 5rem;

@@ -121,7 +121,14 @@ function updateThumbnail() {
     });
 }
 
-// Initial call to highlight the first thumbnail
 updateThumbnail();
 
 
+//
+        document.querySelector('#media-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file && file.size > 50 * 1024 * 1024) { // 50MB
+                alert('File size exceeds the 50MB limit. Please upload a smaller file.');
+                event.target.value = '';
+            }
+        });

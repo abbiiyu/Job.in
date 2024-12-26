@@ -223,6 +223,7 @@ body {
 
 .dropdown ul li:hover {
     background-color: rgba(96, 139, 193, 0.3);
+    color: white;
 }
 
 .popup {
@@ -264,184 +265,186 @@ body {
     font-size: 14px;
     color: #555;
 }
-
-/* batas nav */
-
-/* Main banner container */
-.banner-awal {
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    padding: 1.25rem; /* 20px equivalent */
+/* // */
+.form-container {
+    padding: 20px;
+    border-radius: 8px;
+    width: 50rem;
+    margin: 0 20rem;
+    margin-top: 2rem;
 }
 
-/* Wrapper to keep the images and content together */
-.banner-wrapper {
-    margin-top: 2rem;
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.label-project-name {
+    width: 10rem;
+    display: inline-block;
+}
+
+.label-media-upload {
+    width: 10rem;
+    display: inline-block;
+}
+
+.label-project-description {
+    width: 22rem;
+    display: inline-block;
+}
+
+.label-price {
+    width: 4rem;
+    display: inline-block;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select,
+.form-group button {
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: rgba(96, 139, 193, 0.3);
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.textarea-project{
+    width: 30rem;
+    height: 3rem;
+}
+
+.textarea-desk {
+    height: 13rem;
+    width: 90rem;
+}
+
+.textarea-price {
+    height: 60px;
+    width: 15rem;
+}
+
+.form-group input[type="file"] {
+    display: none;
+}
+
+.upload-box {
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    height: 13rem;
+    color: #888;
+    width: 90rem;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(96, 139, 193, 0.3);
+}
+
+.upload-box span {
+    margin-bottom: 3rem;
     display: flex;
     align-items: center;
-    background-color: #608BC1;
-    padding: 0.625rem; /* 10px equivalent */
-    border-radius: 1rem; /* 10px equivalent */
-    color: white;
-    width: 100%;
-    height: auto;
-    max-width: 75%; /* Make the banner content take 75% of the outer container */
-}
-
-/* Style for images */
-.banner-wrapper img {
-    height: 15rem;
-    width: 15rem;
-    margin: 0 1.25rem; /* 20px equivalent space between images and text content */
-}
-
-/* Style for centered text content */
-.banner-content {
     text-align: center;
-    color: white;
-    flex: 1; /* Makes the text content take up available space between images */
-}
-
-.banner-content h1 {
-    font-size: 3rem; 
-    margin: 0;
-}
-
-.banner-content p {
-    font-size: 1.5rem; 
-    margin: 0.3125rem 0 0; 
-}
-
-/* Main container styling */
-.Programtech {
-    font-family: Poppins;;
-    padding: 3rem;
-}
-
-.Programtech h2 {
-    font-size: 3rem; 
-    margin-left: 12rem;
-    margin-bottom: 2rem;
-}
-
-/* Container for the boxes */
-.box-program {
-    display: flex;
     justify-content: center;
-    gap: 2rem; /* Space between each box */
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-}
-
-/* Individual box styling */
-.isi-box {
-    display: flex;
-    flex-direction: row; /* Align items in a row */
-    align-items: center; /* Vertically center the image and text */
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
-    width: 21rem; /* Adjust box width as needed */
-    gap: 2rem; /* Space between image and text */
-    cursor: pointer;
-}
-
-.isi-box:hover {
-    transform: scale(1.05); /* Slightly scales up the box */
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
-    background-color: black;
-    color: white
-}
-
-.isi-box img {
-    width: 4rem;
-    height: 4rem;
-    background-color: #D9D9D9;
-    transition: transform 0.3s ease; /* Adds a hover effect to the image */
-}
-
-.isi-box:hover img {
-    transform: scale(1.1); /* Scales up the image slightly on hover */
-}
-
-.isi-box p {
-    font-size: 1.5rem;
-    margin: 0;
-    color: #333;
-    text-align: left;
-}
-
-.isi-box p:hover  {
-    color: white;
-} 
-
-.List-explore {
-    margin: 2rem auto;
-    padding: 3rem;
-    height: 70rem;
-}
-
-.List-explore h3 {
-    font-size: 3rem; 
-    margin-left: 12rem;
-    margin-bottom: 3rem;
-}
-
-.box-explore {
-    display: flex;
-    flex-wrap: wrap; /* Membungkus elemen secara otomatis */
-    justify-content: center; /* Menengahkan elemen di kontainer */
-    row-gap: 1rem; /* Jarak antar baris */
-    column-gap: 2rem; /* Jarak antar kolom */
-    margin: 0 auto; /* Posisikan kontainer di tengah */
-}
-
-.isi-explore {
-    display: flex;
+    gap: 8px;
+    font-size: 1rem;
     flex-direction: column;
-    align-items: flex-start;
-    box-sizing: border-box;
-    padding: 1rem;
-    text-align: left;
-    text-decoration: none;
-    color: inherit;
-    border-radius: 3rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi pada elemen utama */
 }
 
-.isi-explore img {
-    width: 20rem;
-    height: 12rem;
-    object-fit: cover;
-    border-radius: 1rem;
-    display: block;
-    border: 1px solid #D9D9D9;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi hanya untuk gambar */
+.upload-box img{
+    margin-top:3rem;
+    width: 3rem;
 }
 
-.isi-explore:hover img {
-    transform: scale(1.05); /* Memperbesar gambar saat hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada gambar */
-}
-
-.isi-explore p {
-    font-weight: bold;
-    margin: 1rem 0 0 0;
-    transition: transform 0.3s ease; /* Transisi untuk teks */
-}
-
-.isi-explore:hover p {
-    transform: scale(1.05); /* Memperbesar teks saat hover */
-}
-
-.box-explore a {
-    text-decoration: none;
+.upload-box span:hover {
     color: black;
 }
 
-/* ///// */
+.currency-popup {
+    display: none;
+    position: absolute;
+    top: 114%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    width: 300px;
+    padding: 20px;
+    z-index: 1000;
+}
 
+.currency-popup button {
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgba(96, 139, 193, 0.3);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.currency-popup button:hover {
+    background-color: #0056b3;
+}
+
+.currency-popup .option {
+    margin-bottom: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.btn-currency {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: rgba(96, 139, 193, 0.3);
+    color:gray;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-currency:hover {
+    color: black;
+}
+
+.btn-done {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(96, 139, 193, 0.3);
+    color:gray;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-left: 80rem;
+    margin-bottom: 3rem;
+}
+
+.btn-done:hover {
+    color: black;
+}
+
+/* Footer styling */
 .footer {
     background-color: #003161;
     color: white;

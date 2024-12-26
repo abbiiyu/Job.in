@@ -48,19 +48,18 @@ body {
     background-color: whitesmoke;
 }
 
-.search-area {
+.search-section {
     display: flex;
     justify-content: center;
     margin-right: 4rem;
 }
 
-.search-container {
+.search-box {
     position: relative;
     width: 450px;
-
 }
 
-.search-container input[type="text"] {
+.search-box input[type="text"] {
     width: 40.004rem;
     height: 3.625rem;
     padding: 10px 15px;
@@ -73,7 +72,7 @@ body {
     font-size: 20px;
 }
 
-.search-container button {
+.search-box button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -93,15 +92,15 @@ body {
     height: 3.301rem;
 }
 
-.search-container input::placeholder {
+.search-box input::placeholder {
     color: black; /* Ganti dengan warna yang diinginkan */
     opacity: 1;
 }
-.search-container button i {
+
+.search-box button i {
     font-size: 30px;
     color: white; /* Warna ikon */
 }
-
 /* Navbar links */
 .navbar .navbar-link {
     display: flex;
@@ -129,6 +128,15 @@ body {
 
 .navbar .navbar-link a:hover {
     color: black;
+}
+
+/* Hover styling for order link */
+
+#orderLink{
+    cursor: pointer;
+}
+#orderLink:hover {
+    color: black; 
 }
 
 .profile-icon {
@@ -189,7 +197,6 @@ body {
 }
 
 
-
 .dropdown li a{
     text-decoration: none;
     color:black;
@@ -215,9 +222,48 @@ body {
 }
 
 .dropdown ul li:hover {
-    background-color: #f0f0f0; /* Warna latar saat di-hover */
+    background-color: rgba(96, 139, 193, 0.3);
 }
 
+.popup {
+    display: none; /* Tersembunyi secara default */
+    position: absolute;
+    top: 6.5rem; /* Sesuaikan dengan posisi */
+    left: 62%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 20rem; /* Lebar popup */
+    z-index: 1000;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-image {
+    margin-top: 2rem;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.popup h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 14px;
+    color: #555;
+}
 /* batas nav */
 
 /* Main banner container */
@@ -238,6 +284,7 @@ body {
     border-radius: 1rem; /* 10px equivalent */
     color: white;
     width: 100%;
+    cursor: pointer;
     height: auto;
     max-width: 75%; /* Make the banner content take 75% of the outer container */
 }
@@ -254,6 +301,11 @@ body {
     text-align: center;
     color: white;
     flex: 1; /* Makes the text content take up available space between images */
+}
+
+.banner-content a{
+    text-decoration: none;
+    color: white;
 }
 
 .banner-content h1 {

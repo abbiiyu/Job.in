@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/uploadproject.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>List-Freelance</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../foto/logoputih.png" alt="">
+        </div>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" placeholder="Search of any service...">
+                <button>
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="navbar-link">
+            <a href="">Home</a>
+            <a href="#" id="orderLink" >Order</a>
+
+            <a href="#" style="color: #ffffff;">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="#" style="color: #ffffff;">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="#" style="color: #ffffff;">
+                <i class="fa-regular fa-heart"></i>
+            </a>
+        </div>
+
+        <div class="popup" id="orderPopup">
+            <div class="popup-content">
+                <img src="../foto/norder.png" alt="No Orders Yet" class="popup-image">
+                <h3>No Orders Yet</h3>
+                <p>Use the search box to find the digital services you need.</p>
+            </div>
+        </div>
+        
+
+        <!-- pop up order -->
+
+
+        <div class="profile-icon" id="profileIcon" onclick="toggleDropdown()"></div>
+        
+        <div class="dropdown" id="dropdownMenu">
+
+            <ul>
+                <li><a href="">Salma Agustin</a></li>
+                <hr style="border: 1px solid #003161;">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="../!html/uploadproject.html">Upload Project</a></li>
+                <li><a href="bill-payment.html">Bill a Payment</a></li>
+                <hr style="border: 1px solid #003161;">
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="logout.html">Log Out</a></li>
+            </ul>
+            
+        </div>
+
+        <script src="../script.js/listfreelance.js"></script>
+    </nav> 
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="currency-popup" id="currency-popup">
+        <div class="option">
+            <button onclick="selectCurrency('Rp')">Indonesian Rupiah IDR Rp</button>
+        </div>
+        <div class="option">
+            <button onclick="selectCurrency('$')">United States Dollar USD $</button>
+        </div>
+    </div>
+
+     <div class="overlay" id="overlay"></div>
+
+    <div class="currency-popup" id="currency-popup">
+        <div class="option">
+            <button onclick="selectCurrency('Rp')">Indonesian Rupiah IDR Rp</button>
+        </div>
+        <div class="option">
+            <button onclick="selectCurrency('$')">United States Dollar USD $</button>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="project-name" class="label-project-name">Project Name</label>
+                <input type="text" id="project-name" name="project-name"class="textarea-project" placeholder=""><br>
+                <small>Maximum number 50</small>
+            </div>
+    
+            <div class="form-group">
+                <label for="media-upload" class="label-media-upload">Media Upload</label>
+                <div class="upload-box" onclick="document.getElementById('media-upload').click()">
+                    <input type="file" id="media-upload" name="media-upload" accept="image/*,video/*" required>
+                    <span>
+                        <img src="../foto/iconfolder 1.png" alt="Upload Icon" >
+                        Upload Here
+                    </span>
+                </div>
+                <small>Maximum file size: 50MB</small>
+            </div>
+    
+            <div class="form-group">
+                <label for="project-description" class="label-project-description">Description About Your Project</label>
+                <textarea id="project-description" class="textarea-desk" name="project-description" placeholder=""></textarea>
+                <small>Maximum number 1500</small>
+            </div>
+
+            <div class="form-group">
+                <label for="price" class="label-price">Price</label>
+                <input type="text" id="price" class="textarea-price" name="price" placeholder="Enter price">
+                <br>
+                <button type="button" class="btn-currency" onclick="openCurrencyPopup()">Choose Currency</button>
+            </div>
+    
+            <a href="" class="btn-done">Done</a>
+        </form>
+    </div>
+    
+    <script>
+        const overlay = document.getElementById('overlay');
+        const currencyPopup = document.getElementById('currency-popup');
+        const priceInput = document.getElementById('price');
+    
+        function openCurrencyPopup() {
+            overlay.style.display = 'block';
+            currencyPopup.style.display = 'block';
+        }
+    
+        function closeCurrencyPopup() {
+            overlay.style.display = 'none';
+            currencyPopup.style.display = 'none';
+        }
+    
+        overlay.addEventListener('click', closeCurrencyPopup);
+    
+        function selectCurrency(symbol) {
+            priceInput.value = symbol + ' ';
+            priceInput.dataset.currency = symbol;
+            closeCurrencyPopup();
+        }
+    
+        document.querySelector('#media-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file && file.size > 50 * 1024 * 1024) {
+                alert('File size exceeds the 50MB limit. Please upload a smaller file.');
+                event.target.value = '';
+            }
+        });
+    
+        document.getElementById('price').addEventListener('keypress', function(event) {
+            const charCode = event.charCode;
+            if (charCode < 48 || charCode > 57) {
+                event.preventDefault();
+            }
+        });
+    
+        document.getElementById('price').addEventListener('focus', function() {
+            if (!this.dataset.currency) {
+                alert('Please choose a currency first.');
+                this.blur();
+            }
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="../foto/logoputih.png" alt="">
+            </div>
+            <div class="footer-contact">
+                <div class="phone">
+                    <img src="../foto/footerphone.png" alt="">
+                    <p>+(62)12358398 <br>sirkulaidn@gmail.com</p>
+                </div>
+                <br>
+                <div class="marker">
+                    <img src="../foto/marker.png" alt="">
+                    <p>Jln. Krikil no.55 <br> Jakarta, Indonesia</p>
+                </div>
+            </div>
+    
+            <div class="footer-link">
+                <a href="">Help & Support</a>
+                <a href="">Our Team</a>
+                <a href="">Home</a>
+                <a href="">Partnership</a>
+                <a href="">About Us</a>
+                <a href="">Privacy</a>
+            </div>
+        </div>
+    
+        <!-- Pindahkan hr ke sini -->
+        <hr>
+    
+        <div class="footer-bottom">
+            <img src="../foto/logoputih.png" alt="">
+            <p>&copy; Copyright All Rights Reserved.</p>
+            <div class="footer-sosmed">
+                <a href="https://www.instagram.com/"><img src="../foto/footerig.png" alt="Instagram"></a>
+                <a href="https://twitter.com/"><img src="../foto/footertwitter.png" alt="Twitter"></a>
+                <a href="https://www.youtube.com/"><img src="../foto/footeryt.png" alt="YouTube"></a>
+                <a href="https://www.facebook.com/"><img src="../foto/footerfb.png" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/"><img src="../foto/footerlinkin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+    
+        
+</body>
+</html>
